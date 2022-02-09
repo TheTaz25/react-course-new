@@ -1,12 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
+interface Properties {
+  name: string,
+}
+
+const App: React.FC<Properties> = ({
+  name,
+}) => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -16,11 +22,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Hello {name}
         </a>
       </header>
     </div>
   );
-}
+};
 
 export default App;
