@@ -6,6 +6,7 @@ import Greeting from './pages/Greetings';
 import AppContextProvider from './contexts/appContext';
 import PersonComponent from './pages/Person';
 import CoffeeKitchen from './pages/CoffeeKitchen';
+import Animations from './pages/Animations';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
+            <Route path="animation-land" element={<Animations />} />
             <Route path="kitchen" element={<CoffeeKitchen />} />
             <Route path="details" element={<Details />}>
               <Route path="person" element={<PersonComponent />} />
