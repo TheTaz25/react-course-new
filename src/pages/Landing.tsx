@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 // import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import CoffeeKitchen from './CoffeeKitchen';
+// import CoffeeKitchen from './CoffeeKitchen';
 
 const convertToUppercase = (names: Array<string>) => names.map((name) => name.toUpperCase());
 
@@ -41,7 +41,7 @@ const Landing: React.FC = () => {
       <button onClick={alsoGreetJulian}>Add Julian</button>
       <button onClick={toggleUppercase}>Uppercase it!</button>
       <Link to="/details/person/Tim">Go To Tim</Link>
-      <CoffeeKitchen />
+      {/* <CoffeeKitchen /> */}
       {/* <Outlet /> */}
     </div>
   );

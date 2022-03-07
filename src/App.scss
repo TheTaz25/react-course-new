@@ -5,3 +5,37 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.main-menu {
+  width: 100%;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: hotpink;
+      font-size: larger;
+      padding: 8px;
+      transition: background-color 200ms ease-in-out;
+      position: relative;
+    }
+    a:hover {
+      background-color: greenyellow;
+    }
+    a::after {
+      content: ' ';
+      position: absolute;
+      background-color: hotpink;
+      height: 2px;
+      width: 0;
+      bottom: -4px;
+      left: 0;
+      transition: width 200ms ease-in-out;
+    }
+    a:hover::after {
+      width: 100%;
+    }
+  }
+}
